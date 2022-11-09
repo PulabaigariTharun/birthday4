@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy😄 B-day🎂</title>
+   <link href="https://fonts.googleapis.com/css?family=Caveat|Rancho&display=swap" rel="stylesheet">
+   <style>
+       body{
+        background-image: linear-gradient( 68.4deg,  rgba(248,182,204,1) 0.5%, rgba(192,198,230,1) 49%, rgba(225,246,240,1) 99.8% );
+       }
+       .container {
+    /* padding-left: 4.75rem;
+    padding-right: 4.75rem; */
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Front */
+#cover {
+    position: absolute;
+    z-index: 2;
+    transition: 3s;
+    transform-origin: 0;
+    max-width: 30rem;
+    width: 20rem;
+    height: 32rem;
+    padding: 1.2rem;
+    text-align: center;
+    border-radius: 0 22px 22px 0;
+    background-color: rgb(255, 105, 180);
+    box-shadow: 0px 0px 7px 2px #dfdfdf;
+}
+
+/* Inside */
+#inside {
+    position: absolute;
+    z-index: 1;
+    transition: 1s;
+    transform-origin: 0;
+    width: 20rem;
+    height: 31rem;
+    padding: 1.2rem;
+    text-align: center;
+    border-radius: 0 22px 22px 0;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 7px 2px #dfdfdf;
+}
+
+#inside .message {
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+}
+
+/* Back */
+#back {
+    position: absolute;
+    z-index: 0;
+    transition: 1s;
+    transform-origin: 0;
+    width: 20rem;
+    height: 30rem;
+    padding: 1.2rem;
+    text-align: center;
+    border-radius: 0 22px 22px 0;
+    background-color: #eeeeee;
+    box-shadow: 0px 0px 7px 2px #dfdfdf;
+}
+
+/* Opening/closing of card */
+.open-card, .next {
+    transform: rotateY(90deg);
+}
+
+
+/* Buttons */
+.btn {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    width: 70%;
+    padding: .7rem 1rem;
+    border-radius: 32px;
+    border: 2px solid #000000;
+    transition: .9s;
+}
+
+.btn.btn-cover {
+    color: #ffffff;
+    background: -webkit-linear-gradient(#ff9191, #ff468d);
+    box-shadow: 0 0 6px #ca60a2;
+    border-color:#fc67a0;
+}
+
+.btn.btn-cover:hover {
+    border: 2px solid #ffffff;
+    background: #fa30ac;
+    transition: .9s;
+}
+
+.btn.btn-inside {
+    color: #ffffff;
+    background: -webkit-linear-gradient(#2f90ff, #2430b1);
+    box-shadow: 0 0 6px #949494;
+    border-color: #2430b1;
+}
+
+.btn.btn-inside:hover {
+    border: 2px solid #2430b1;
+    background: #2430b1;
+    transition: .9s;
+}
+
+.btn.btn-back {
+    color: #ffffff;
+    background: -webkit-linear-gradient(#a245ee, #57058d);
+    box-shadow: 0 0 6px #353535;
+    border-color: #57058d;
+}
+
+.btn.btn-back:hover {
+    border: 2px solid #57058d;
+    background: #57058d;
+    transition: .9s;
+}
+
+/* Heart */
+.heart {
+    position: relative;
+    left: 35%;
+    width: 100px;
+    height: 90px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #882261;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/* Pictures */
+.cover-pic, .inside-pic, .back-pic {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+/* Text */
+.hbd {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2;
+
+}
+
+.name {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 0 #943d3d, 1px 0px 20px #ff0000, 0px 0px 12px #2c1122;
+    line-height: 3;
+}
+
+.message {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.message span {
+    display: block;
+}
+
+.end-message {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+#msg {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+}
+
+    
+
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cover">
+            <h3 class="hbd">Happy Birthday🎂💝</h3>
+            <h1 class="name">Voidmain()</h1>
+        
+            <div class="heart"></div>
+            <button class="btn btn-cover" onclick="openCard()">Open Card</button>
+        </div>
+        <div id="inside" style="padding-top: 2rem;">
+            <img class="inside-pic" src="pic4.jpeg">
+            <p class="message">
+      
+               Happy birthday to My 1010 0001 0001 1110💕. ℹ️ 💖 👆 so much, and I made this to show how much you mean to me❤❤ Even though I can't be with you everyday, you're always in my heart💓💓 You make me laugh😂, you're always happy😄, and your smile is so beautiful ;) I love you from the bottom of my heart and no amount of love emojis can show how much you mean to me💗💙💚💛💜💓💕💖💝💞💟🧡🖤 Happy Birthday Voidmain() ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤
+            </p>
+            <button class="btn btn-inside" onclick="next()" style="margin-top: 2rem;">Next</button>
+        </div>
+        <div id="back">
+            <p class="message">
+                <img class="back-pic" src="pic4.jpeg">
+                <span style="font-weight: bold;font-size: 1.4rem;">Void main()</span></span>
+            </p>
+            <p class="message" style="color: #ff0000;" id="msg">
+                It doesn't matter where in the world we are as near or far,you'll always be my twinkling star.Even with the many miles currently between us,you're still the most special person in my life.Having you is blesssed. 
+                I know that I will certainly do everything
+           I can to make your special day as incredible as it can be, because you mean the world to me!❤
+              <span style="color: #000000;">from Raju❤</span>
+            </p>
+            <button class="btn btn-back" onclick="closeCard()">Close Card</button>
+        </div>
+    </div>
+    <script>
+
+function openCard() {
+    document.getElementById('cover').className = 'open-card';
+}
+
+function next() {
+    document.getElementById('inside').className = 'next';
+}
+
+function closeCard() {
+    document.getElementById('inside').className = '';
+    document.getElementById('cover').className = '';
+}
+
+//alert("Created for my best friend😘😘😍😍😍");
+//alert("If you have anything to say to her, tell me in the comments");
+    </script>
+ 
+</body>
+</html>
